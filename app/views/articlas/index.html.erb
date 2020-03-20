@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articlas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articlas.each do |articla| %>
+      <tr>
+        <td><%= articla.title %></td>
+        <td><%= articla.body %></td>
+        <td><%= link_to 'Show', articla %></td>
+        <td><%= link_to 'Edit', edit_articla_path(articla) %></td>
+        <td><%= link_to 'Destroy', articla, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Articla', new_articla_path %>
