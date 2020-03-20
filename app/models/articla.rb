@@ -1,0 +1,2 @@
+class Articla < ApplicationRecord
+end
